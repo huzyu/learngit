@@ -1,0 +1,36 @@
+git init 将目录变成git可以管理的仓库
+
+git add file 将工作区文件的修改提交到暂存区，可反复多次使用，添加多个文件
+
+git commit -m "..."   将暂存区文件提交到版本库，可以多次add，一次commit提交
+
+git status 查看当前仓库的情况
+
+git diff <file>   比较文件在工作区和暂存区两次修改的差异
+
+git log --pretty=oneline 查看提交历史
+
+git reset --hard HEAD^ 回退到上一个版本
+
+git reset --hard commitID 回退到某个版本
+
+git reflog  查看所有分支的所有操作记录（包括已经被删除的 commit 记录和 reset 的操作）
+Git管理的文件分为：工作区，版本库，版本库又分为暂存区stage和暂存区分支master(仓库)
+工作区>>>>暂存区>>>>仓库
+git add把文件从工作区>>>>暂存区，git commit把文件从暂存区>>>>仓库，
+git diff查看工作区和暂存区差异，
+git diff --cached查看暂存区和仓库差异，
+git diff HEAD 查看工作区和仓库的差异，
+git add的反向命令git checkout，撤销工作区修改，即把暂存区最新版本转移到工作区，
+git commit的反向命令git reset HEAD，就是把仓库最新版本转移到暂存区
+
+git checkout -- file 命令用于切换分支或从工作暂存区区恢复文件
+
+git rm file 工作区文件删除后通过git rm移除仓库文件
+git reset HEAD <file>可以把暂存区的修改撤销掉（unstage），重新放回工作区
+
+git remote add origin git@server-name:path/repo-name.git 将本地仓库与GitHub远程仓库关联 
+eg: git remote add origin git@github.com:huzyu/learngit.git 注意：远程仓库与本地仓库同名，
+且初始远程仓库最好为空白仓库。
+
+git push -u origin mastergit clone git@server-name:path/repo-name.git    把远程仓库克隆到本地
