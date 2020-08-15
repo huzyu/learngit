@@ -33,4 +33,18 @@ git remote add origin git@server-name:path/repo-name.git 将本地仓库与GitHu
 eg: git remote add origin git@github.com:huzyu/learngit.git 注意：远程仓库与本地仓库同名，
 且初始远程仓库最好为空白仓库。
 
-git push -u origin mastergit clone git@server-name:path/repo-name.git    把远程仓库克隆到本地
+git push -u origin master  向远程仓库推送
+git clone git@server-name:path/repo-name.git    把远程仓库克隆到本地
+
+git branch 查看分支，当前分支前面会标一个*号
+git checkout <branch> 切换分支
+git checkout -b <branch> 加入-b参数表示创建并切换，相当于git branch <branch> 和 git checkout <branch>
+git merge <branch> 用与将指定分支合并到当前分支
+git branch -d <branch> 删除指定分支
+git switch -c dev 创建并切换到新的dev分支。 直接切换到已有的master分支，可以使用：git switch master
+
+git pull 从远程抓取分支
+git remote -v 查看远程库信息
+
+
+
