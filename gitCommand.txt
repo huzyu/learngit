@@ -46,5 +46,14 @@ git switch -c dev 创建并切换到新的dev分支。 直接切换到已有的m
 git pull 从远程抓取分支
 git remote -v 查看远程库信息
 
+Git的标签是版本库的快照，其实就是指向某个commit的指针（跟分支很像对不对？但是分支可以移动，标签不能移动），
+tag就是一个让人容易记住的有意义的名字，它跟某个commit绑定在一起。
+git tag <tagname> 打标签，默认标签是打在最新提交的commit上的
+git tag <tagname> <commitid> 给某个提交打标签
+git tag -a <tagname> -m "blablabla..."可以指定标签信息
+git show <tagname>查看标签信息
+注意：标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。
+git tag -d <tagname> 如果tag创建错了，也可以删除
+
 
 
